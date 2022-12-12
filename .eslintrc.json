@@ -8,11 +8,13 @@
         "airbnb",
         "prettier"
     ],
+    
     "parserOptions": {
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
+            "modules": true
         },
-        "ecmaVersion": "latest",
+        "ecmaVersion": 6,
         "sourceType": "module"
     },
     "plugins": [

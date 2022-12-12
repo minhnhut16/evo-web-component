@@ -1,10 +1,21 @@
 {
-  "name": "react-web-component",
-  "version": "1.0.0",
+  "name": "@nhutngo/react-web-component",
+  "version": "1.8.13",
   "description": "",
-  "main": "build/index.cjs.js",
-  "module": "build/index.esm.js",
-  "browser": "build/index.js",
+  "author": "minhnhut",
+  "license": "ISC",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "global": "dist/index.js",
+  "targets": {
+    "global": {
+      "context": "browser",
+      "outputFormat": "global"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
@@ -20,33 +31,37 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "react-scripts start",
-    "build": "rollup -c --bundleConfigAsCjs"
+    "build": "parcel build src/index.js --no-source-maps"
   },
-  "author": "minhnhut",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.20.5",
-    "@babel/preset-env": "^7.20.2",
-    "@babel/preset-react": "^7.18.6",
-    "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-commonjs": "^23.0.4",
-    "@rollup/plugin-node-resolve": "^15.0.1",
-    "eslint": "^7.32.0 || ^8.2.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.8.1",
-    "react": "^18.2.0",
-    "react-barcode": "^1.4.6",
-    "react-dom": "^18.2.0",
+  "dependencies": {
+    "@swc/helpers": "^0.4.14",
+    "prop-types": "15.8.1",
+    "react": "18.0.0",
+    "react-barcode": "^1.4.5",
+    "react-dom": "18.0.0",
     "react-loading": "^2.0.3",
-    "react-scripts": "^5.0.1",
-    "react-to-webcomponent": "^2.0.0-alpha.0",
-    "rollup": "^3.7.0",
-    "rxjs": "^7.6.0"
-  }
+    "react-scripts": "4.0.3",
+    "react-to-webcomponent": "1.6.0",
+    "rxjs": "^7.5.7"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "parcel": "^2.8.0",
+    "prettier": "^2.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhnhut16/evo-web-component.git"
+  },
+  "bugs": {
+    "url": "https://github.com/minhnhut16/evo-web-component/issues"
+  },
+  "homepage": "https://github.com/minhnhut16/evo-web-component#readme"
 }

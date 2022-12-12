@@ -4,7 +4,7 @@ import { sendData } from './shareUtils';
 export default function VoucherInfoLoader() {
   useEffect(() => {
     setTimeout(() => {
-      sendData('truongqk1987');
+      sendData('truongqk19cjdnj87');
     }, 1500);
   }, []);
 

@@ -2,7 +2,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { useEffect, useState } from 'react';
 import ReactBarcode from 'react-barcode';
-import ReactLoading from 'react-loading';
 import { subscribe } from './shareUtils';
 
 function Barcode(props) {
@@ -13,7 +12,7 @@ function Barcode(props) {
     subscribe((broadcastedValue) => setValue(broadcastedValue));
   }, []);
 
-  if (!value) return <ReactLoading type="spin" color="#c0c0c0" height={300} widht={300} />;
+  if (!value) return null;
 
   return <ReactBarcode value={value} {...props} />;
 }
